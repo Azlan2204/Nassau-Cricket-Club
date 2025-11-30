@@ -39,6 +39,7 @@
             padding: 10px 15px;  
             font-size: 18px;  
             border-color: white;
+            color:black;
         }
         button:hover{
             background-color:darkgrey;
@@ -48,33 +49,39 @@
 /* Mobile styles */
 @media (max-width: 600px) {
     .logo-row {
-        flex-direction: column;   /* stacks logo and text */
+        flex-direction: column;
         gap: 8px;
     }
 
     .logo-row img {
-        width: 120px;             /* smaller logo */
+        width: 120px;
     }
 
     #logotoptext {
-        font-size: 20px;          /* smaller heading */
+        font-size: 20px;
         text-align: center;
     }
 
     ul {
-        text-align: left;         /* align buttons to left */
-        padding: 0 16px;
+        text-align: center;
+        padding: 0;
+        margin: 0 auto;
     }
 
     li {
-        display: block;           /* stack buttons vertically */
-        margin: 8px 0;
+        display: block;
+        margin: 8px auto;
+        width: 100%;
+        max-width: 300px;      /* All buttons same width */
     }
 
     button {
-        width: 60%;              /* full-width buttons */
-        padding: 8px;
-        margin:5px;
-        font-size: 16px;          /* slightly smaller text */
+        display: block;        /* Ensures full control over width */
+        width: 100%;           /* Forces equal width for ALL buttons */
+        padding: 10px;
+        margin: 5px 0;
+        font-size: 16px;
+        color: black;
+        box-sizing: border-box; /* Prevent border from shrinking Home button */
     }
 }
