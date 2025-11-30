@@ -1,52 +1,97 @@
-        body {
-            background-color: black;
-            margin: 0;
-            font-family: system-ui, -apple-system, Arial, sans-serif;
-        }
+/* BODY & HEADER */
+body {
+    background-color: black;
+    margin: 0;
+    font-family: system-ui, -apple-system, Arial, sans-serif;
+}
 
-        .logo-row {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            padding: 16px;
-        }
+header {
+    background-color: black;
+}
 
-        .logo-row img {
-            width: 200px;
-            height: auto;
-        }
+/* TOP LOGO ROW */
+.logo-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px;
+}
+.fillerbutton button {
+    visibility: hidden;
+}
 
-        #logotoptext {
-            color: white;
-            margin: 0;
-            font-size: 24px;
-            line-height: 1;
-            font:Courier;
-        }
-        ul {
-            list-style: none;  
-            padding: 0;
-            margin: 0;
-            text-align: center;  
-        }
+.logo-row img {
+    width: 200px;
+    height: auto;
+}
 
-        li {
-            display: inline;     
-            margin: 10px 10px;      
-        }
-        button {
-            padding: 10px 15px;  
-            font-size: 18px;  
-            border-color: white;
-            color:black;
-        }
-        button:hover{
-            background-color:darkgrey;
-            border-color: darkgrey;
+#logotoptext {
+    color: white;
+    margin: 0;
+    font-size: 24px;
+    font-family: Courier;
+}
 
-        }
-/* Mobile styles */
+/* HEADINGS & TEXT */
+h1, h2, h3, h4, h5, h6, p {
+    color: white;
+}
+
+/* NAVBAR */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px auto;
+    text-align: center;
+    background-color: rgb(101, 101, 101);
+}
+
+li {
+    display: inline-block;
+    margin: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 18px;
+    border: 2px solid white;
+    color: black;
+    cursor: pointer;
+    border-radius: 7%;
+}
+
+button:hover {
+    background-color: darkgrey;
+    border-color: darkgrey;
+}
+
+/* CENTER BOX */
+.centered-box {
+    background-color: black;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;      /* stack content vertically */
+    align-items: center;
+    justify-content: center;
+}
+
+/* TABLETS */
+@media (max-width: 768px) {
+    .centered-box {
+        width: 95%;
+        padding: 25px;
+        font-size: 1.2rem;
+    }
+}
+
+/* PHONES */
 @media (max-width: 600px) {
     .logo-row {
         flex-direction: column;
@@ -63,25 +108,28 @@
     }
 
     ul {
-        text-align: center;
-        padding: 0;
-        margin: 0 auto;
+        padding: 25;
+        margin: 25 auto;
     }
 
     li {
         display: block;
         margin: 8px auto;
         width: 100%;
-        max-width: 300px;      /* All buttons same width */
+        max-width: 300px;
     }
 
     button {
-        display: block;        /* Ensures full control over width */
-        width: 100%;           /* Forces equal width for ALL buttons */
-        padding: 10px;
-        margin: 5px 0;
+        width: 100%;
         font-size: 16px;
-        color: black;
-        box-sizing: border-box; /* Prevent border from shrinking Home button */
+        padding: 10px;
+    }
+
+    .centered-box {
+        width: 100%;
+        padding: 20px;
+        font-size: 1rem;
+        min-height: auto;     /* grow naturally */
+        justify-content: flex-start;  /* start from top */
     }
 }
