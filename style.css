@@ -18,10 +18,6 @@ header {
     padding: 16px;
 }
 
-.fillerbutton button {
-    visibility: hidden;
-}
-
 .logo-row img {
     width: 200px;
     height: auto;
@@ -35,25 +31,30 @@ header {
 }
 
 /* HEADINGS */
+h1 {
+    color: white;
+    text-align: center;
+    margin: 40px 0 20px 0;
+}
+
 h2 {
     color: black;
     text-align: center;
-    margin: 30px 0;
+    margin: 0 0 10px 0;
+    font-size: 28px;
 }
-h1{
-    color:white;
-    text-align: center;
-    margin: 30px 0;
+h3{
+    font-size:24px;
 }
 
 /* --------------------------- */
-/*      NAVBAR ONLY            */
+/*          NAVBAR             */
 /* --------------------------- */
 
 .nav {
     list-style: none;
-    padding: 0;
-    margin: 10px auto;
+    padding: 20px 0;
+    margin: 10px auto 30px auto;
     text-align: center;
     background-color: rgb(101, 101, 101);
 }
@@ -70,6 +71,7 @@ h1{
     color: black;
     cursor: pointer;
     border-radius: 7%;
+    background-color: white;
 }
 
 .nav button:hover {
@@ -77,11 +79,15 @@ h1{
     border-color: darkgrey;
 }
 
+.fillerbutton button {
+    visibility: hidden;
+}
+
 /* --------------------------- */
-/*      NORMAL LISTS           */
+/*          NORMAL LISTS       */
 /* --------------------------- */
 
-ul { 
+ul {
     padding: 0;
     margin: 0;
 }
@@ -92,32 +98,39 @@ li {
     color: white;
 }
 
-/* CENTER BOX */
+/* --------------------------- */
+/*        UPCOMING BOX         */
+/* --------------------------- */
+
 .centered-box {
-    background-color:rgb(220, 220, 220);
-    width: 100%;
-    margin: 0 auto;
-    padding: 40px;
+    background-color: rgb(220, 220, 220);
+    width: 55%;
+    margin: 20px auto 30px auto;
+    padding: 20px;
     box-sizing: border-box;
     text-align: center;
     font-family: "Times New Roman", Times, serif;
     font-size: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.15);
 }
+
 
 /* TABLETS */
 @media (max-width: 768px) {
     .centered-box {
-        width: 95%;
-        padding: 25px;
+        width: 85%;
+        padding: 20px;
         font-size: 1.2rem;
     }
 }
 
 /* PHONES */
+@media (max-width: 600px) {
+    .centered-box {
+        width: 90%;
+    }
+}
 @media (max-width: 600px) {
     .logo-row {
         flex-direction: column;
@@ -152,9 +165,9 @@ li {
     }
 
     .centered-box {
-        width: 100%;
-        padding: 20px;
+        width: 80%;
         font-size: 1rem;
-        justify-content: flex-start;
+        padding: 10px 15px;
+        border-radius: 10px;
     }
 }
