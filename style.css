@@ -9,7 +9,7 @@ header {
     background-color: black;
 }
 
-/* TOP LOGO ROW */
+/* LOGO ROW */
 .logo-row {
     display: flex;
     align-items: center;
@@ -37,20 +37,11 @@ h1 {
     margin: 40px 0 20px 0;
 }
 
-h2 {
-    color: black;
-    text-align: center;
-    margin: 0 0 10px 0;
-    font-size: 28px;
-}
-h3{
-    font-size:22px;
+.upcoming-heading {
+    margin-bottom: 30px;
 }
 
-/* --------------------------- */
-/*          NAVBAR             */
-/* --------------------------- */
-
+/* NAVBAR */
 .nav {
     list-style: none;
     padding: 20px 0;
@@ -83,10 +74,7 @@ h3{
     visibility: hidden;
 }
 
-/* --------------------------- */
-/*          NORMAL LISTS       */
-/* --------------------------- */
-
+/* RESET LISTS */
 ul {
     padding: 0;
     margin: 0;
@@ -98,39 +86,47 @@ li {
     color: white;
 }
 
-/* --------------------------- */
-/*        UPCOMING BOX         */
-/* --------------------------- */
-
-.centered-box {
-    background-color: rgb(220, 220, 220);
-    width: 55%;
-    margin: 20px auto 30px auto;
-    padding: 20px;
-    box-sizing: border-box;
+/* GAME CARD */
+.game-card {
+    background-color: white;
+    color: black;
+    width: 70%;           /* wider on desktop */
+    max-width: 800px;     /* bigger max width */
+    margin: 0 auto 40px auto;
+    padding: 35px 40px;   /* larger padding */
+    border-radius: 14px;
+    box-shadow: 0 0 16px rgba(255, 255, 255, 0.25);
     text-align: center;
-    font-family: "Times New Roman", Times, serif;
-    font-size: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 0 12px rgba(255, 255, 255, 0.15);
+    box-sizing: border-box;
 }
 
+.game-card h2 {
+    margin-top: 0;
+    font-size: 1.8rem; /* slightly bigger title */
+}
+
+.game-card p {
+    margin: 8px 0;
+    font-size: 1.2rem; /* slightly bigger text */
+}
 
 /* TABLETS */
 @media (max-width: 768px) {
-    .centered-box {
+    .game-card {
         width: 85%;
-        padding: 20px;
-        font-size: 1.2rem;
+        padding: 25px 30px;
+    }
+
+    .game-card h2 {
+        font-size: 1.6rem;
+    }
+
+    .game-card p {
+        font-size: 1.1rem;
     }
 }
 
-/* PHONES */
-@media (max-width: 600px) {
-    .centered-box {
-        width: 90%;
-    }
-}
+/* MOBILE */
 @media (max-width: 600px) {
     .logo-row {
         flex-direction: column;
@@ -164,10 +160,16 @@ li {
         padding: 10px;
     }
 
-    .centered-box {
+    .game-card {
         width: 80%;
+        padding: 20px;
+    }
+
+    .game-card h2 {
+        font-size: 1.4rem;
+    }
+
+    .game-card p {
         font-size: 1rem;
-        padding: 10px 15px;
-        border-radius: 10px;
     }
 }
