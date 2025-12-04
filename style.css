@@ -85,6 +85,21 @@ li {
     padding: 0;
     color: white;
 }
+.centered-box {
+    background-color: rgb(220, 220, 220);
+    width: 85%;
+    margin: 20px auto 30px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.15);
+}
+.About_Us_Heading{
+    font-size:50px;
+}
 
 /* GAME CARD */
 .game-card {
@@ -125,8 +140,24 @@ li {
         font-size: 1.1rem;
     }
 }
+/* TABLETS */
+@media (max-width: 768px) {
+    .centered-box {
+        width: 85%;
+        padding: 20px;
+        font-size: 1.2rem;
+    }
+}
 
-/* MOBILE */
+/* PHONES */
+@media (max-width: 600px) {
+    .centered-box {
+        width: 80%;
+        padding: 10px 15px;
+        font-size: 1rem;
+        border-radius: 10px;
+    }
+}
 @media (max-width: 600px) {
     .logo-row {
         flex-direction: column;
